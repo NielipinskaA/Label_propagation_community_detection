@@ -3,10 +3,7 @@ import pandas as pd
 import numpy as np
 import random
 
-import matplotlib.colors as mcolors
-import matplotlib.pyplot as plt
-
-def labelPropagationDetection(G: nx.Graph):
+def labelPropagationDetection(G: nx.Graph, iterations = None):
 
     nodes = list(G.nodes())
     nodes_labels = {}
@@ -15,6 +12,7 @@ def labelPropagationDetection(G: nx.Graph):
         nodes_labels[node] = node
 
     t = False
+    i = 0
     while t == False:
         t = True
         X = nodes
@@ -41,6 +39,10 @@ def labelPropagationDetection(G: nx.Graph):
             if new_label != nodes_labels[x]:
                 nodes_labels[x] = new_label
                 t = False
+        i += 1
+        if iterations != None and i == iterations:
+            break
+
             
     unique_labels = list(np.unique(list(nodes_labels.values())))
     cluster_number = len(unique_labels)
