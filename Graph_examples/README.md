@@ -38,3 +38,8 @@ prawdopodobieństwo krawędzi wewnątrz bloku : 0.2
 
 prawdopodobieństwo krawędzi między blokami : 0.01
 
+# Friendship-network_data_2013
+
+wierchołki 130
+
+Dane rzeczywiste
