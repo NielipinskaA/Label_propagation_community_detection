@@ -1,5 +1,5 @@
 # Example
-wierchołki : 40
+wierchołki : 40 \\
 społeczności : 7
 
 prawdopodobieństwo krawędzi wewnątrz bloku : 0.3
